@@ -1,6 +1,24 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'home#index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # register
+  get 'register', to: 'registrations#new'
+  post 'register', to: 'registrations#create'
+
+  # login
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+
+  # logout
+  delete 'logout', to: 'sessions#destroy'
+
+  #gdpr 
+  delete 'delete_account', to: 'gdpr#destroy'
+
+  resources :dashboard
+
+  namespace :admin do
+    resources :users
+    resources :events
+  end
 end

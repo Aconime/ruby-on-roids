@@ -1,0 +1,40 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.left-nav-items {
+  float: left;
+}
+.right-nav-items {
+  float:right;
+}
+.nav-items{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.nav-items:hover{
+  display: block;
+  background-color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+.login-btn{
+  background-color: green;
+}
+
+.logout-btn{
+  background-color: red;
+}
+
+button {
+  border: none;
+}

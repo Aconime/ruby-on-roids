@@ -1,0 +1,13 @@
+<div class="homepage">
+  <ul>
+    <%= link_to 'Ruby on Roids', root_path, class: 'left-nav-items nav-items' %>
+    <% if Current.user %>
+      <%= button_to 'Logout', logout_path, method: :delete, class: 'right-nav-items nav-items logout-btn' %>
+      <%= link_to 'Dashboard', dashboard_index_path, class: 'right-nav-items nav-items' %>
+    <% else %>
+      <%= link_to 'Login', login_path, class: 'right-nav-items nav-items login-btn' %>
+      <%= link_to 'Register', register_path, class: 'right-nav-items nav-items login-btn' %>
+    <% end %>
+    <%= link_to 'Events', root_path, class: 'right-nav-items nav-items' %>
+  </ul>
+</div>
