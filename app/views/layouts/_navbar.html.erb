@@ -7,12 +7,11 @@
     <% elsif Current.user && Current.user.role == 'admin' %>
       <%= button_to 'Logout', logout_path, method: :delete, class: 'right-nav-items nav-items logout-btn' %>
       <%= link_to 'Users', admin_users_path, class: 'right-nav-items nav-items' %>
-      <%= link_to 'Events', dashboard_index_path, class: 'right-nav-items nav-items' %>
-      <%= link_to 'Blogs', dashboard_index_path, class: 'right-nav-items nav-items' %>
+      <%= link_to 'Events', admin_events_path, class: 'right-nav-items nav-items' %>
+      <%= link_to 'Blogs', admin_blogs_path, class: 'right-nav-items nav-items' %>
     <% else %>
       <%= link_to 'Login', login_path, class: 'right-nav-items nav-items login-btn' %>
       <%= link_to 'Register', register_path, class: 'right-nav-items nav-items login-btn' %>
     <% end %>
-    <%= link_to 'Events', root_path, class: 'right-nav-items nav-items' %>
   </ul>
 </div>

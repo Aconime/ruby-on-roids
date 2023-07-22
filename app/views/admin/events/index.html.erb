@@ -1,1 +1,16 @@
-Events
+<p style="color: green"><%= notice %></p>
+
+<h1>Events (Index)</h1>
+
+<div id="events">
+  <% @events.each do |event| %>
+    <%= render event %>
+    <p>
+      <%= link_to "Show this event", [:admin, event] %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New event", new_admin_event_path %><br>
+
+<%== pagy_nav(@pagy) %>

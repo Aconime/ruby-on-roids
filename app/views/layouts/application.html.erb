@@ -19,10 +19,12 @@
   </head>
 
   <body>
-    <%= render partial: 'layouts/navbar' %>
-    <div class='container'>
-      <%= render partial: 'layouts/flash' %>
-      <%= yield %>
+    <div class='main'>
+      <%= render partial: 'layouts/navbar' %>
+      <div class='container'>
+        <%= render partial: 'layouts/flash' %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

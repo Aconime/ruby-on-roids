@@ -22,5 +22,6 @@ Rails.application.routes.draw do
     post 'login', to: 'sessions#create'
     resources :users
     resources :events
+    resources :blogs
   end
 end
