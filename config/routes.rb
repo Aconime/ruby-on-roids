@@ -16,4 +16,9 @@ Rails.application.routes.draw do
   delete 'delete_account', to: 'gdpr#destroy'
 
   resources :dashboard
+
+  namespace :admin do
+    resources :users
+    resources :events
+  end
 end
