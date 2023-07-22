@@ -3,4 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'home#index'
+
+  get 'register', to: 'registrations#new'
+  post 'register', to: 'registrations#create'
+
+  resources :users
 end
