@@ -1,6 +1,17 @@
-<% @users.each do |user| %>
-  <%= user.email %>
-  <br>
-<% end %>
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", [:admin, user] %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user", new_admin_user_path %>
+<br>
 
 <%== pagy_nav(@pagy) %>
