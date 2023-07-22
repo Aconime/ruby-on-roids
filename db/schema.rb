@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_22_144715) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_22_154700) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_22_144715) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "team_requests", force: :cascade do |t|
+    t.bigint "team_id", null: false
+    t.bigint "user_id", null: false
+    t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team_id"], name: "index_team_requests_on_team_id"
+    t.index ["user_id"], name: "index_team_requests_on_user_id"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -48,5 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_22_144715) do
     t.index ["team_id"], name: "index_users_on_team_id"
   end
 
+  add_foreign_key "team_requests", "teams"
+  add_foreign_key "team_requests", "users"
   add_foreign_key "users", "teams"
 end

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :teams
   root 'home#index'
 
   get 'register', to: 'registrations#new'
@@ -13,6 +12,12 @@ Rails.application.routes.draw do
   resources :events, only: %i(index show)
   resources :blogs, only: %i(index show)
   resources :leaderboard, only: :index
+  resources :teams
+  resources :team_requests
+  resources :teams do
+    get 'request', to: 'team_requests#new'
+    post 'request', to: 'team_requests#create'
+  end
 
   namespace :admin do
     get 'login', to: 'sessions#new'

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  belongs_to :team
+  belongs_to :team, optional: true
 
   has_secure_password
 
