@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   resources :dashboard
 
   namespace :admin do
+    get 'login', to: 'sessions#new'
+    post 'login', to: 'sessions#create'
     resources :users
     resources :events
   end
