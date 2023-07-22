@@ -1,14 +1,11 @@
 class SessionsController < ApplicationController
-  def new
-  end
+  def new; end
 
   def create
     user = User.find_by(email: params[:email])
     if user.present? && user.authenticate(params[:password])
       session[:user_id] = user.id
       case user.role
-      when 'user'
-        redirect_to dashboard_index_path, notice: 'Login successful'
       when 'admin'
         redirect_to admin_users_path, notice: 'Login successful'
       else
