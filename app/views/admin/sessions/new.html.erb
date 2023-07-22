@@ -1,0 +1,16 @@
+<h1> Login </h1>
+
+<%= form_with url: admin_login_path do |form| %>
+  <div class='mb-3'>
+    <%= form.label :username %>
+    <%= form.text_field :username, class: 'form-control', placeholder: 'admin' %>
+  </div>
+  <div class='mb-3'>
+    <%= form.label :password %>
+    <%= form.password_field :password, class: 'form-control', placeholder: 'password' %>
+  </div>
+  <br>
+  <div class='mb-3'>
+    <%= form.submit 'Login', class: 'btn btn-primary' %>
+  </div>
+<% end %>

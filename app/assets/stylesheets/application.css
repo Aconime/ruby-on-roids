@@ -21,3 +21,8 @@
   list-style: none;
   font-family: 'Quicksand', 'sans-serif';
 }
+
+.main {
+  background-color: #8f9aa8;
+  height: 100vh;
+}

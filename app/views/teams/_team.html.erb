@@ -1,0 +1,18 @@
+<div id="<%= dom_id team %>">
+  Users:<br>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% team.users.each do |user| %>
+        <%= render partial: 'user', locals: { user: user } %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
