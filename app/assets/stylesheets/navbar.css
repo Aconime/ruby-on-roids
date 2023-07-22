@@ -10,6 +10,13 @@ li {
   float: left;
 }
 
+.left-nav-items {
+  float: left;
+}
+.right-nav-items {
+  float:right;
+}
+
 li a {
   display: block;
   color: white;
@@ -17,12 +24,16 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
+.nav-items{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 /* Change the link color to #111 (black) on hover */
 
-.right-nav-items {
-  float:right;
-}
+
 
 .right-nav-items:hover{
   background-color: rgb(181, 0, 0);
