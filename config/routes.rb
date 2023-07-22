@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   # logout
   delete 'logout', to: 'sessions#destroy'
 
+  #gdpr 
+  delete 'delete_account', to: 'gdpr#destroy'
+
   resources :dashboard
 end

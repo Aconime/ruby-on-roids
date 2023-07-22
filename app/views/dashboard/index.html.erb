@@ -1,3 +1,5 @@
 <h1>User Dashboard</h1>
 
 Hello <%= Current.user.name %>
+
+<%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'right-nav-items nav-items logout-btn' %>

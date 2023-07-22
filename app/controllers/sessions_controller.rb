@@ -8,8 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to dashboard_index_path, notice: 'Login successful'
     else
-      flash[:alert] = 'Invalid email or password'
-      render :new
+      redirect_to login_path, alert: 'Invalid email or password'
     end
   end
 
