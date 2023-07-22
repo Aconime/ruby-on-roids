@@ -1,14 +1,23 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Users</h1>
+<h1>Users (Index)</h1>
 
 <div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", [:admin, user] %>
-    </p>
-  <% end %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <%= render partial: 'row', locals: { user: user } %>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
 <%= link_to "New user", new_admin_user_path %>
