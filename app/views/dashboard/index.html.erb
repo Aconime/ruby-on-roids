@@ -1,10 +1,12 @@
-<h1>User Dashboard</h1>
+<div class='custom-container'>
+  <h1>My Profile</h1>
 
-Name: <%= Current.user.name %><br>
-Email: <%= Current.user.email %><br>
-Role: <%= Current.user.role %><br>
-<% if Current.user.team %>
-Team: <%= Current.user.team.name %>
-<% end %>
+  Name: <%= Current.user.name %><br>
+  Email: <%= Current.user.email %><br>
+  Role: <%= Current.user.role %><br>
+  <% if Current.user.team %>
+  Team: <%= Current.user.team.name %>
+  <% end %>
 
-<%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'right-nav-items nav-items logout-btn' %>
+  <%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'right-nav-items nav-items logout-btn' %>
+</div>

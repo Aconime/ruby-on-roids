@@ -31,3 +31,10 @@
   background-color: var(--app-background-color);
   height: 100vh;
 }
+
+.custom-container{
+  padding-right:20%;
+  padding-left:20%;
+  margin-right:auto;
+  margin-left:auto;
+}
