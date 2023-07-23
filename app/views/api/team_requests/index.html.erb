@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Team requests</h1>
+
+<div id="team_requests">
+  <% @team_requests.each do |team_request| %>
+    <%= render team_request %>
+    <p>
+      <%= link_to "Show this team request", [:api, team_request] %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New team request", new_api_team_request_path %>
