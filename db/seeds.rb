@@ -23,6 +23,7 @@ while User.count < 150 do
   role = 'user'
   lorem = Faker::Lorem.paragraph(sentence_count: 2)
   technologies = SOFTWARE_TECHNOLOGIES.sample(rand(1..4)).join(", ")
+  points = rand(1..50)
 
   User.create!(
     first_name: first_name,
@@ -32,7 +33,8 @@ while User.count < 150 do
     password: 'password',
     password_confirmation: 'password',
     bio: lorem,
-    technologies: technologies
+    technologies: technologies,
+    points: points
   )
 end
 

@@ -27,4 +27,6 @@
   <% unless Current.user && Current.user.team %>
     <%= link_to "New team", new_team_path %>
   <% end %>
+  <br>
+  <%== pagy_nav(@pagy) %>
 </div>
