@@ -1,10 +1,12 @@
-<h1>Editing blog</h1>
+<div class='custom-container'>
+  <h1>Editing blog</h1>
 
-<%= render "form", blog: @blog %>
+  <%= render "form", blog: @blog %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Show this blog", [:admin, @blog] %> |
-  <%= link_to "Back to blogs", admin_blogs_path %>
+  <div>
+    <%= link_to "Show this blog", [:admin, @blog] %> |
+    <%= link_to "Back to blogs", admin_blogs_path %>
+  </div>
 </div>

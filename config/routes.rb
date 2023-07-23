@@ -36,4 +36,12 @@ Rails.application.routes.draw do
     resources :events
     resources :blogs
   end
+
+  namespace :api do
+    resources :team_requests
+    resources :users
+    resources :events
+    resources :blogs
+    resources :teams
+  end
 end

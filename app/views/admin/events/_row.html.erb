@@ -3,5 +3,18 @@
   <td><%= event.name %></td>
   <td><%= event.description %></td>
   <td><%= event.date %></td>
-  <td><%= link_to "Show", [:admin, event] %></td>
+  <td>
+    <%= link_to [:admin, event] do %>
+      <i class="fa-solid fa-eye"></i>
+    <% end %>
+    
+    <%= link_to edit_admin_event_path(event) do %>
+      <i class="fas fa-edit"></i>
+    <% end %>
+    
+    <%= link_to admin_event_path(event), method: :delete, data: { confirm: "Are you sure you want to delete this team?" } do %>
+      <i class="fas fa-trash-alt"></i>
+    <% end %>
+
+  </td>
 </tr>
