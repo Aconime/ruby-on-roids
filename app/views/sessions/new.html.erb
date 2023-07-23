@@ -1,18 +1,10 @@
-<div class='custom-container'>
-  <h1> Login </h1>
-
-  <%= form_with url: login_path do |form| %>
-    <div class='mb-3'>
-      <%= form.label :email %>
-      <%= form.text_field :email, class: 'form-control', placeholder: 'john.smith@mail.com' %>
-    </div>
-    <div class='mb-3'>
-      <%= form.label :password %>
-      <%= form.password_field :password, class: 'form-control', placeholder: 'password' %>
-    </div>
-    <br>
-    <div class='mb-3'>
-      <%= form.submit 'Login', class: 'btn btn-primary' %>
-    </div>
-  <% end %>
+<div class="login-page">
+  <div class="form">
+    <%= form_with url: login_path, html: { class: 'login-form' } do |form| %>
+      <%= form.text_field :email, placeholder: 'email' %>
+      <%= form.password_field :password, placeholder: 'password' %>
+      <%= form.submit 'Login', class: 'button' %>
+      <p class="message">Not registered? <%= link_to 'Create an account', register_path %></p>
+    <% end %>
+  </div>
 </div>
