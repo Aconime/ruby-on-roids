@@ -1,0 +1,91 @@
+#home {
+    --banner-txt-colour: #fff;
+    --border-raduis: 4px;
+}
+
+.comp-design > * {
+    border-radius: var(--border-raduis);
+}
+
+#home * {
+    margin: 0;
+    padding: 0;
+    color: var(--dev-txt-colour);
+}
+
+.home-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* background: url(app/assets/images/home/tech_banner.jpg); ??????*/
+    background-image: url('tech_banner.jpg');
+    background-repeat: no-repeat;
+    /* background image not working T-T, i don't know how to path images in ruby correctly,
+    tried looking it up and attepmting solutions to no avail - jack */
+
+    /* background-color: #0a0a23; */
+    background-size: cover;
+    height: 60vh;
+    height: 60dvh;
+}
+
+.home-banner * {
+    color: var(--banner-txt-colour);
+}
+
+.home-banner h1 {
+    font-size: 7rem;
+}
+
+#home-content-box {
+    /* outline: 1px red dashed; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#home-content-box > * {
+    display: block;
+}
+
+.home-content {
+    /* outline: 1px dashed purple; */
+    width: 80%;
+}
+
+.home-content * {
+    /* outline: 1px dashed yellow; */
+}
+
+.list-box {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.list-item {
+    width: 100%;
+    height: 18rem;
+    background-color: var(--item-colour);
+}
+
+.tile-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.tile {
+    /* outline: 1px dashed red; */
+    width: 30rem;
+    height: 40rem;
+    background-color: var(--item-colour);
+}
+
+#about-footer {
+    outline: 1px dashed green;
+}
