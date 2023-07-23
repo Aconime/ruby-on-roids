@@ -14,4 +14,10 @@ class User < ApplicationRecord
   def name
     "#{first_name.humanize} #{last_name.humanize}"
   end
+
+  def profile_image
+    return 'placeholders/profile_image.png' if image_url.blank?
+
+    image_url
+  end
 end
