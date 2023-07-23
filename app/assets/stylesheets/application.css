@@ -24,7 +24,7 @@
   box-sizing: border-box;
   list-style: none;
   font-family: "Roboto", sans-serif;
-  color: var(--dev-txt-colour);
+  /* color: var(--dev-txt-colour); */
 }
 
 .container {
@@ -33,9 +33,9 @@
 }
 
 .main {
-  color: var(--dev-text-colour);
-  background-color: var(--dev-colour);
-  /* background-color: var(--app-background-color); */
+  /* color: var(--dev-text-colour); */
+  /* background-color: var(--dev-colour); */
+  background-color: var(--app-background-color);
   /* so my eyes don't melt */
 
   height: 100%;

@@ -1,18 +1,24 @@
-<div class='profile'>
+<div class='profile comp-design'>
   <section class="profile-card">
     <div class="profile-image">
         <%= image_tag Current.user.profile_image %>
     </div>
     <div class="profile-content">
-      <article>
-        <h3><%= Current.user.name %></h3>
-        <p><%= Current.user.email %></p>
+      <article class="profile-contact">
+        <h3 class="profile-username"><%= Current.user.name %></h3>
+        <p class="profile-email"><%= Current.user.email %></p>
       </article>
-      <article>
-        <p><%= Current.user.role %></p>
-        <% if Current.user.team %>
-          <p><%= Current.user.team.name %></p>
-        <% end %>
+      <article class="mini-box">
+        <div>
+          <p class="profile-role">Role</p>
+          <p class="profile-role"><%= Current.user.role %></p>
+        </div>
+        <div>
+          <p class="profile-team">Team</p>
+          <% if Current.user.team %>
+            <p class="profile-team"><%= Current.user.team.name %></p>
+          <% end %>
+        </div>
       </article>
       <%= link_to 'Update my account', dashboard_edit_path, class: 'login-btn profile-edit' %>
     </div>
