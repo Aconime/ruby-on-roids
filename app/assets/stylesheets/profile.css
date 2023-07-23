@@ -25,6 +25,11 @@
     color: black;
 }
 
+.profile-img {
+    max-width: 300px;
+    overflow: hidden;
+}
+
 .profile-content {
     width: 100%;
     /* outline: 1px dashed red;   */
