@@ -2,6 +2,10 @@
   /* Default */
   --app-background-color: #ededed;
 
+  --dev-txt-colour: #d0d0d5;
+  --dev-colour: #3b3b4f;
+  /* so my eyes don't melt */
+
   /* Admin Dashboard - Basic*/
   --adm-dsh-background-color: #ededed;
   --adm-dsh-components-background-color: #fff;
@@ -35,4 +39,8 @@
   /* Admin Dashboard - Support Items */
   --adm-dsh-components-support-items-hover-color: #f4f4f4;
   --adm-dsh-components-support-items-hover-border-color: #706fd3;
+
+  /* Home components */
+
+  --item-colour: #D9D9D9;
 }
