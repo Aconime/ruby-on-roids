@@ -1,5 +1,6 @@
 <div class="login-page">
   <div class="form">
+    <h1>Register</h1>
     <%= form_with model: @user, url: register_path, html: { class: 'login-form' } do |form| %>
       <% if @user.errors.any? %>
         <div class='alert alert-danger'>
