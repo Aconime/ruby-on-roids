@@ -23,7 +23,6 @@ while User.count < 150 do
   role = 'user'
   lorem = Faker::Lorem.paragraph(sentence_count: 2)
   technologies = SOFTWARE_TECHNOLOGIES.sample(rand(1..4)).join(", ")
-  points = rand(1..50)
 
   User.create!(
     first_name: first_name,
@@ -33,8 +32,7 @@ while User.count < 150 do
     password: 'password',
     password_confirmation: 'password',
     bio: lorem,
-    technologies: technologies,
-    points: points
+    technologies: technologies
   )
 end
 
@@ -42,9 +40,11 @@ def create_teams
   20.times do
     name = Faker::Team.name
     user = User.where(team_id: nil).first
+    points = rand(1..50)
     team = Team.new(
       name: name,
-      owner: user
+      owner: user,
+      points: points
     )
     if team.save
       user.update(team: team)
