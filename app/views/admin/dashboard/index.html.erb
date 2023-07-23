@@ -6,7 +6,7 @@
       <div class="admin-dashboard-stats-panel red">
         <div class="admin-dashboard-stats-panel-content">
           <div>
-            <h1>250</h1>
+            <h1><%= User.count %></h1>
             <p>Total Registered Users</p>
           </div>
 
@@ -31,7 +31,7 @@
       <div class="admin-dashboard-stats-panel green">
         <div class="admin-dashboard-stats-panel-content">
           <div>
-            <h1>17</h1>
+            <h1><%= Event.count %></h1>
             <p>Total Active Events</p>
           </div>
 
@@ -54,7 +54,7 @@
       <div class="admin-dashboard-stats-panel turq">
         <div class="admin-dashboard-stats-panel-content">
           <div>
-            <h1>34</h1>
+            <h1><%= Blog.where(published: true).count %></h1>
             <p>Total Published Blogs</p>
           </div>
 
