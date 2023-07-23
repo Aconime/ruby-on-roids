@@ -1,0 +1,38 @@
+:root {
+  /* Default */
+  --app-background-color: #ededed;
+
+  /* Admin Dashboard - Basic*/
+  --adm-dsh-background-color: #ededed;
+  --adm-dsh-components-background-color: #fff;
+  --adm-dsh-components-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.15);
+  --adm-dsh-components-border-color: rgba(0, 0, 0, 0.15);
+  --adm-dsh-components-radius: 4px;
+  --adm-dsh-text-color: #333;
+  --adm-dsh-text-letter-spacing: 0.2px;
+
+  /* Admin Dashboard - Stats Panel */
+  --adm-dsh-components-stats-text-color: #fff;
+  --adm-dsh-components-stats-darker-text-color: #f8f8f8;
+
+  /* Admin Dashboard - Stats Panel Color Variations */
+  --adm-dsh-components-stats-background-color-v1: #e74c3c;
+  --adm-dsh-components-stats-action-background-color-v1: #c0392b;
+  --adm-dsh-components-stats-action-darker-background-color-v1: #9f3124;
+
+  --adm-dsh-components-stats-background-color-v2: #2ecc71;
+  --adm-dsh-components-stats-action-background-color-v2: #27ae60;
+  --adm-dsh-components-stats-action-darker-background-color-v2: #229452;
+
+  --adm-dsh-components-stats-background-color-v3: #3498db;
+  --adm-dsh-components-stats-action-background-color-v3: #2980b9;
+  --adm-dsh-components-stats-action-darker-background-color-v3: #216897;
+
+  --adm-dsh-components-stats-background-color-v4: #1abc9c;
+  --adm-dsh-components-stats-action-background-color-v4: #16a085;
+  --adm-dsh-components-stats-action-darker-background-color-v4: #138770;
+
+  /* Admin Dashboard - Support Items */
+  --adm-dsh-components-support-items-hover-color: #f4f4f4;
+  --adm-dsh-components-support-items-hover-border-color: #706fd3;
+}
