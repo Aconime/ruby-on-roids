@@ -1,0 +1,25 @@
+.back-btn {
+  padding: 10px;
+  border: 1px solid lightblue;
+  background-color: rgb(199, 229, 241);
+  border-radius: 5px;
+}
+
+.action-btn {
+  padding: 1px;
+  border-radius: 2px;
+}
+.kick-btn {
+  border: 1px solid red;
+  background-color: rgb(253, 106, 106);
+}
+
+.view-btn {
+  border: 1px solid green;
+  background-color: rgb(106, 253, 126);
+  margin-left: 5px;
+}
+
+.action-btns {
+  display: flex;
+}

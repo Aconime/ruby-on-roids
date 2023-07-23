@@ -1,0 +1,23 @@
+<%= form_with(model: team_request) do |form| %>
+  <% if team_request.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(team_request.errors.count, "error") %> prohibited this team_request from being saved:</h2>
+
+      <ul>
+        <% team_request.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :user_id, class: 'form-control', value: Current.user.id %>
+  <%= form.hidden_field :team_id, class: 'form-control', value: params[:id] %>
+  <div class='mb-3'>
+    <%= form.label :message %>
+    <%= form.text_field :message, class: 'form-control', placeholder: 'Hi! I would like to join your team' %>
+  </div><br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

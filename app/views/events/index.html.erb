@@ -1,22 +1,24 @@
-<p style="color: green"><%= notice %></p>
+<div class='custom-container'>
+  <p style="color: green"><%= notice %></p>
 
-<h1>Events</h1>
+  <h1>Events</h1>
 
-<div id="events">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Description</th>
-        <th scope="col">Date</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @events.each do |event| %>
-        <%= render partial: 'row', locals: { event: event } %>
-      <% end %>
-    </tbody>
-  </table>
+  <div id="events">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Date</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events.each do |event| %>
+          <%= render partial: 'row', locals: { event: event } %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

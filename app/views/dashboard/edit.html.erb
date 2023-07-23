@@ -1,7 +1,7 @@
 <div class='custom-container'>
-  <h1>Sign Up</h1>
+  <h1>Edit Profile</h1>
 
-  <%= form_with model: @user, url: register_path do |form| %>
+  <%= form_with model: @user, url: dashboard_url(@user) do |form| %>
     <% if @user.errors.any? %>
       <div class='alert alert-danger'>
         <% @user.errors.full_messages.each do |message| %>
@@ -22,6 +22,18 @@
       <%= form.text_field :last_name, class: 'form-control', placeholder: 'Smith' %>
     </div>
     <div class='mb-3'>
+      <%= form.label :image_url %>
+      <%= form.text_field :image_url, class: 'form-control', placeholder: 'https://example.com/profile.webp' %>
+    </div>
+    <div class='mb-3'>
+      <%= form.label :bio %>
+      <%= form.text_field :bio, class: 'form-control', placeholder: 'Hi I\'m ...' %>
+    </div>
+    <div class='mb-3'>
+      <%= form.label :technologies %>
+      <%= form.text_field :technologies, class: 'form-control', placeholder: 'I work with ...' %>
+    </div>
+    <div class='mb-3'>
       <%= form.label :password %>
       <%= form.password_field :password, class: 'form-control', placeholder: 'password' %>
     </div>
@@ -31,7 +43,7 @@
     </div>
     <br>
     <div class='mb-3'>
-      <%= form.submit 'Register', class: 'btn btn-primary' %>
+      <%= form.submit 'Update', class: 'btn btn-primary' %>
     </div>
   <% end %>
 </div>
