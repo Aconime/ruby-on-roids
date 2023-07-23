@@ -1,12 +1,11 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[ show ]
+  before_action :set_event, only: %i[show]
 
   def index
     @events = Event.all
   end
 
-  def show
-  end
+  def show; end
 
   private
 

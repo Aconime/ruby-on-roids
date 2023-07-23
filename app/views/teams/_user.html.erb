@@ -2,4 +2,9 @@
   <th scope="row"><%= user.id %></th>
   <td><%= user.name %></td>
   <td><%= user.email %></td>
+  <td>
+    <% if Current.user.id == team.owner_id %>
+      <%= button_to 'Kick', root_path, style: 'border: 1px solid red' %>
+    <% end %>
+  </td>
 </tr>

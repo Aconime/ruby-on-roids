@@ -2,6 +2,14 @@
 
 <%= render @team %>
 
+<% if Current.user && Current.user.id == @team.owner_id %>
+  <%= render partial: 'manage_requests', locals: { team_requests: @team_requests } %>
+<% end %>
+
+<% if Current.user && !Current.user.team %>
+  <%= render partial: 'request', locals: { team_request: @team_request } %>
+<% end %>
+
 <div>
   <%= link_to "Back to teams", teams_path %>
 </div>

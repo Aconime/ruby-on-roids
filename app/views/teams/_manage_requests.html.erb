@@ -1,0 +1,12 @@
+<h3>Manage Requests</h3>
+<% team_requests.each do |request| %>
+  <div style='border: 1px solid pink;'>
+    Name: <%= request.user.name %><br>
+    Email: <%= request.user.email %><br>
+    Message: <%= request.message %>
+    <div style='display: flex;'>
+      <%= button_to 'Reject', reject_request_team_path(request_id: request), method: :delete, class: 'logout-btn', style:'margin: 10px; padding: 10px;' %>
+      <%= button_to 'Accept', accept_request_team_path(request_id: request), method: :post, class: 'login-btn', style:'margin: 10px; padding: 10px;' %>
+    </div>
+  </div>
+<% end %>

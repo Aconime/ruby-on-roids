@@ -1,27 +1,27 @@
 class Admin::EventsController < Admin::BaseController
-  before_action :set_event, only: %i[ show edit update destroy ]
+  before_action :set_event, only: %i[show edit update destroy]
 
   def index
     @events = Event.all
     @pagy, @events = pagy(@events)
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @event = Event.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @event = Event.new(event_params)
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to admin_event_url(@event), notice: "Event was successfully created." }
+        format.html do
+          redirect_to admin_event_url(@event), notice: 'Event was successfully created.'
+        end
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -33,7 +33,9 @@ class Admin::EventsController < Admin::BaseController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to admin_event_url(@event), notice: "Event was successfully updated." }
+        format.html do
+          redirect_to admin_event_url(@event), notice: 'Event was successfully updated.'
+        end
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -46,7 +48,9 @@ class Admin::EventsController < Admin::BaseController
     @event.destroy
 
     respond_to do |format|
-      format.html { redirect_to admin_events_url, notice: "Event was successfully destroyed." }
+      format.html do
+        redirect_to admin_events_url, notice: 'Event was successfully destroyed.'
+      end
       format.json { head :no_content }
     end
   end

@@ -3,7 +3,7 @@ class CreateBlogs < ActiveRecord::Migration[7.0]
     create_table :blogs do |t|
       t.string :title
       t.text :body
-      t.boolean :published
+      t.boolean :published, default: false, null: false
 
       t.timestamps
     end
