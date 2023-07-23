@@ -80,10 +80,10 @@
 }
 
 .tile {
-    /* outline: 1px dashed red; */
+    outline: 1px dashed red;
     width: 30rem;
     height: 40rem;
-    background-color: var(--item-colour);
+    /* background-color: black; */
 }
 
 #about-footer {

@@ -1,25 +1,27 @@
-<h1>Blogs (Index)</h1>
+<div class='custom-container'>
+  <h1>Blogs (Index)</h1>
 
-<div id="blogs">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Body</th>
-        <th scope="col">Published</th>
-        <th scope="col">Created At</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @blogs.each do |blog| %>
-        <%= render partial: 'row', locals: { blog: blog } %>
-      <% end %>
-    </tbody>
-  </table>
+  <div id="blogs">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Body</th>
+          <th scope="col">Published</th>
+          <th scope="col">Created At</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @blogs.each do |blog| %>
+          <%= render partial: 'row', locals: { blog: blog } %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= link_to "New blog", new_admin_blog_path %><br>
+
+  <%== pagy_nav(@pagy) %>
 </div>
-
-<%= link_to "New blog", new_admin_blog_path %><br>
-
-<%== pagy_nav(@pagy) %>
