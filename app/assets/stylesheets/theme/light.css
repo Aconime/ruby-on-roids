@@ -2,6 +2,10 @@
   /* Default */
   --app-background-color: #ededed;
 
+  --dev-txt-colour: #d0d0d5;
+  --dev-colour: #3b3b4f;
+  /* so my eyes don't melt */
+
   /* Admin Dashboard - Basic*/
   --adm-dsh-background-color: #ededed;
   --adm-dsh-components-background-color: #fff;

@@ -1,0 +1,54 @@
+#home {
+    --banner-txt-colour: #fff
+}
+
+#home * {
+    margin: 0;
+    padding: 0;
+    color: var(--dev-txt-colour);
+}
+
+.home-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* background: url(app/assets/images/home/tech_banner.jpg); ??????*/
+    /* background-image: url("tech_banner.jpg"); ??????*/
+
+    /* background image not working T-T, i don't know how to path images in ruby correctly,
+    tried looking it up and attepmting solutions to no avail - jack */
+
+    background-color: #0a0a23;
+    background-size: cover;
+    height: 60vh;
+    height: 60dvh;
+}
+
+.home-banner * {
+    color: var(--banner-txt-colour);
+}
+
+.home-banner h1 {
+    font-size: 7rem;
+}
+
+#home-content-box {
+    outline: 1px red dashed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    outline: 1px dashed purple;
+    width: 80%;
+}
+
+.home-content > * {
+    outline: 1px dashed yellow;
+}
+
+#about-footer {
+    outline: 1px dashed green;
+}

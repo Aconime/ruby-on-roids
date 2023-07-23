@@ -14,6 +14,10 @@
  *= require_self
  */
 
+:root {
+  font-size: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +32,9 @@
 }
 
 .main {
-  background-color: var(--app-background-color);
+  background-color: var(--dev-colour);
+  /* background-color: var(--app-background-color); */
+  /* so my eyes don't melt */
+
   height: 100vh;
 }
