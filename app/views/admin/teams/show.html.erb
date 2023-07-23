@@ -1,0 +1,12 @@
+<div class='custom-container'>
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @team %>
+
+  <div>
+    <%= link_to "Edit this team", edit_admin_team_path(@team) %> |
+    <%= link_to "Back to teams", admin_teams_path %>
+
+    <%= button_to "Destroy this team", [:admin, @team], method: :delete %>
+  </div>
+</div>

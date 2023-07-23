@@ -10,7 +10,7 @@
 #home * {
     margin: 0;
     padding: 0;
-    color: var(--dev-txt-colour);
+    /* color: var(--dev-txt-colour); */
 }
 
 .home-banner {
@@ -19,7 +19,7 @@
     justify-content: center;
     width: 100%;
     /* background: url(app/assets/images/home/tech_banner.jpg); ??????*/
-    background-image: url('tech_banner.jpg');
+    background-image: url('home/tech_banner.jpg');
     background-repeat: no-repeat;
     /* background image not working T-T, i don't know how to path images in ruby correctly,
     tried looking it up and attepmting solutions to no avail - jack */

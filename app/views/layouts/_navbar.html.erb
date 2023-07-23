@@ -4,6 +4,7 @@
     <% if Current.user && Current.user.role == 'admin' %>
       <%= button_to 'Logout', logout_path, method: :delete, class: 'right-nav-items nav-items logout-btn' %>
       <%= link_to 'Users', admin_users_path, class: 'right-nav-items nav-items' %>
+      <%= link_to 'Teams', admin_teams_path, class: 'right-nav-items nav-items' %>
       <%= link_to 'Events', admin_events_path, class: 'right-nav-items nav-items' %>
       <%= link_to 'Blogs', admin_blogs_path, class: 'right-nav-items nav-items' %>
       <%= link_to 'Dashboard', admin_dashboard_index_path, class: 'right-nav-items nav-items' %>
@@ -13,7 +14,6 @@
         <%= link_to Current.user.name, dashboard_index_path, class: 'right-nav-items nav-items' %>
       <% else %>
         <%= link_to 'Login', login_path, class: 'right-nav-items nav-items login-btn' %>
-        <%= link_to 'Register', register_path, class: 'right-nav-items nav-items login-btn' %>
       <% end %>
       <%= link_to 'Contact', events_path, class: 'right-nav-items nav-items' %>
       <%= link_to 'Blogs', blogs_path, class: 'right-nav-items nav-items' %>

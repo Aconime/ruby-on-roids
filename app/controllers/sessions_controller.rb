@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       case user.role
       when 'admin'
-        redirect_to admin_users_path, notice: 'Login successful'
+        redirect_to admin_dashboard_index_path, notice: 'Login successful'
       else
         redirect_to dashboard_index_path, notice: 'Login successful'
       end

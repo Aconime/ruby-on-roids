@@ -19,7 +19,6 @@
 }
 
 * {
-  color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,9 +32,9 @@
 }
 
 .main {
-  color: var(--dev-text-colour);
-  background-color: var(--dev-colour);
-  /* background-color: var(--app-background-color); */
+  /* color: var(--dev-text-colour); */
+  /* background-color: var(--dev-colour); */
+  background-color: var(--app-background-color);
   /* so my eyes don't melt */
 
   height: 100%;
