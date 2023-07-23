@@ -1,15 +1,15 @@
 #home {
     --banner-txt-colour: #fff;
-    --border-raduis: 4px;
 }
 
-.comp-design > * {
+.comp-design * {
     border-radius: var(--border-raduis);
+    color: black;
 }
 
 #home * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
     /* color: var(--dev-txt-colour); */
 }
 
@@ -83,7 +83,15 @@
     /* outline: 1px dashed red; */
     width: 30rem;
     height: 40rem;
+    padding: 2.5rem;
     background-color: var(--item-colour);
+}
+
+.blog-img {
+    display: inline-block;
+    /* outline: 1px dashed purple; */
+    width: 25rem;
+    /* margin: 2.5rem; */
 }
 
 #about-footer {

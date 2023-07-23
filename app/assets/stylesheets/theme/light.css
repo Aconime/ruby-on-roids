@@ -1,6 +1,8 @@
 :root {
   /* Default */
   --app-background-color: #ededed;
+  --border-raduis: 4px;
+
 
   --dev-txt-colour: #d0d0d5;
   --dev-colour: #3b3b4f;
