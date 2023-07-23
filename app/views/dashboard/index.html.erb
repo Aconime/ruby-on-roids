@@ -1,16 +1,23 @@
-<div class='custom-container'>
-  <h1>My Profile</h1>
-
-  <%= image_tag Current.user.profile_image %>
-  <br>
-  Name: <%= Current.user.name %><br>
-  Email: <%= Current.user.email %><br>
-  Role: <%= Current.user.role %><br>
-  <% if Current.user.team %>
-  Team: <%= Current.user.team.name %>
-  <% end %>
-
-  <%= link_to 'Update my account', dashboard_edit_path, class: 'nav-items login-btn' %>
-  <br>
-  <%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'nav-items logout-btn' %>
+<div class='profile'>
+  <section class="profile-card">
+    <div class="profile-image">
+        <%= image_tag Current.user.profile_image %>
+    </div>
+    <div class="profile-content">
+      <article>
+        <h3><%= Current.user.name %></h3>
+        <p><%= Current.user.email %></p>
+      </article>
+      <article>
+        <p><%= Current.user.role %></p>
+        <% if Current.user.team %>
+          <p><%= Current.user.team.name %></p>
+        <% end %>
+      </article>
+      <%= link_to 'Update my account', dashboard_edit_path, class: 'login-btn profile-edit' %>
+    </div>
+  </section>
+  <div>
+    <%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'nav-items logout-btn' %>
+  </div>
 </div>
