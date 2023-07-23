@@ -276,3 +276,5 @@ Metrics/AbcSize:
   Enabled: false
 Rails/InverseOf:
   Enabled: false
+Layout/ArgumentAlignment:
+  Enabled: false

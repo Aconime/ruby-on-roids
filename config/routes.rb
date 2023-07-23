@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   delete 'delete_account', to: 'gdpr#destroy'
 
+  get 'dashboard/edit', to: 'dashboard#edit'
+  put 'dashboard/edit', to: 'dashboard#update'
+
   resources :dashboard
   resources :events, only: %i[index show]
   resources :blogs, only: %i[index show]
