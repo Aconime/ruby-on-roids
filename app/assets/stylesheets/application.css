@@ -14,15 +14,20 @@
  *= require_self
  */
 
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  font-family: 'Quicksand', 'sans-serif';
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100% !important;
+  padding: 0 !important;
 }
 
 .main {
-  background-color: #8f9aa8;
+  background-color: var(--app-background-color);
   height: 100vh;
 }

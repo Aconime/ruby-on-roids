@@ -4,22 +4,26 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  margin: 0px !important;
 }
 
 .left-nav-items {
   float: left;
 }
+
 .right-nav-items {
-  float:right;
+  float: right;
 }
-.nav-items{
+
+.nav-items {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
-.nav-items:hover{
+
+.nav-items:hover {
   display: block;
   background-color: blue;
   text-align: center;
@@ -27,11 +31,12 @@ ul {
   text-decoration: none;
 
 }
-.login-btn{
+
+.login-btn {
   background-color: green;
 }
 
-.logout-btn{
+.logout-btn {
   background-color: red;
 }
 

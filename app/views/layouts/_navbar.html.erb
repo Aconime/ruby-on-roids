@@ -6,6 +6,7 @@
       <%= link_to 'Users', admin_users_path, class: 'right-nav-items nav-items' %>
       <%= link_to 'Events', admin_events_path, class: 'right-nav-items nav-items' %>
       <%= link_to 'Blogs', admin_blogs_path, class: 'right-nav-items nav-items' %>
+      <%= link_to 'Dashboard', admin_dashboard_index_path, class: 'right-nav-items nav-items' %>
     <% else %>
       <% if Current.user && Current.user.role == 'user' %>
         <%= button_to 'Logout', logout_path, method: :delete, class: 'right-nav-items nav-items logout-btn' %>
