@@ -39,4 +39,8 @@
   /* Admin Dashboard - Support Items */
   --adm-dsh-components-support-items-hover-color: #f4f4f4;
   --adm-dsh-components-support-items-hover-border-color: #706fd3;
+
+  /* Home components */
+
+  --item-colour: #D9D9D9;
 }
