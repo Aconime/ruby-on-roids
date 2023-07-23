@@ -1,11 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<div class='custom-container'>
+  <p style="color: green"><%= notice %></p>
 
-<h1>Blogs (Show)</h1>
-<%= render @blog %>
+  <h1>Blogs (Show)</h1>
+  <%= render @blog %>
 
-<div>
-  <%= link_to "Edit this blog", edit_admin_blog_path(@blog) %> |
-  <%= link_to "Back to blogs", admin_blogs_path %>
+  <div>
+    <%= link_to "Edit this blog", edit_admin_blog_path(@blog) %> |
+    <%= link_to "Back to blogs", admin_blogs_path %>
 
-  <%= button_to "Destroy this blog", [:admin, @blog], method: :delete %>
+    <%= button_to "Destroy this blog", [:admin, @blog], method: :delete %>
+  </div>
 </div>

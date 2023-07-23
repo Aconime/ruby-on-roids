@@ -1,7 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<div class='custom-container'>
+  <p style="color: green"><%= notice %></p>
 
-< Event Details Here >
+  Name: <%= @event.name %><br>
+  Description: <%= @event.description %><br>
+  Date: <%= @event.date %><br>
+  Created: <%= @event.created_at %><br>
+  Updated: <%= @event.updated_at %>
 
-<div>
-  <%= link_to "Back to events", events_path %>
+  <div>
+    <%= link_to "Back to events", events_path %>
+  </div>
 </div>
