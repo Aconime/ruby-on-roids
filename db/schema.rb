@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_23_133447) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_23_163338) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,6 +45,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_23_133447) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "owner_id"
+    t.integer "points"
     t.index ["owner_id"], name: "index_teams_on_owner_id"
   end
 

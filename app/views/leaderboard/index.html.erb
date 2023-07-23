@@ -11,30 +11,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Ruby on Roids</td>
-        <td>3</td>
-        <td>Today</td>
-        <td>1</td>
-        <td>123</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Masters of the Universe</td>
-        <td>5</td>
-        <td>Today</td>
-        <td>3</td>
-        <td>123</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>The Big Leagues</td>
-        <td>15</td>
-        <td>Today</td>
-        <td>21</td>
-        <td>123</td>
-      </tr>
-    </tbody>
+      <% @teams.each do |team| %>
+        <tr>
+          <th scope="row"><%= @teams.pluck(:id).index(team.id) + 1 %></th>
+          <td><%= team.name %></td>
+          <td><%= team.users.count %></td>
+          <td><%= team.created_at %></td>
+          <td><%= rand(1..10) %></td>
+          <td><%= team.points %></td>
+        </tr>
+      <% end %>
   </table>
+  <br>
+  <%== pagy_nav(@pagy) %>
 </div>
+<br>

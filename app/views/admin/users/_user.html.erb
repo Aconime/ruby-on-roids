@@ -1,6 +1,9 @@
 <div id="<%= dom_id user %>">
+  <%= image_tag user.profile_image %><br>
   Name: <%= user.name %><br>
   Email: <%= user.email %><br>
+  Technologies: <%= user.technologies %><br>
+  Bio: <%= user.bio %><br>
   Role: <%= user.role %><br>
   Created: <%= user.created_at %><br>
   Updated: <%= user.updated_at %>

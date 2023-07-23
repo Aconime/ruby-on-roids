@@ -1,0 +1,31 @@
+.event-card{
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  border-radius: 10px;
+  height: 100%;
+}
+.event-date{
+  background-color: rgba(49, 49, 49, 0.664);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 1px solid black;
+  width: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.date{
+  font-size: 2rem;
+}
+.event-details{
+  width: 100%;
+  padding: 10px;
+}
+.event-details h2{
+  font-size: 3rem;
+}
+.event-details p{
+  font-size: 2rem;
+}

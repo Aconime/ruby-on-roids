@@ -1,0 +1,9 @@
+<tr>
+  <th scope="row"><%= team.id %></th>
+  <td><%= team.name %></td>
+  <td><%= team.user_count %></td>
+  <td><%= team.owner.name %></td>
+  <td><%= team.created_at %></td>
+  <td><%= team.updated_at %></td>
+  <td><%= link_to "Show", [:admin, team] %></td>
+</tr>

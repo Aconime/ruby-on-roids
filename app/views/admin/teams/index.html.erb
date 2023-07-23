@@ -9,10 +9,10 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Team Name</th>
-          <th scope="col">Team Members</th>
+          <th scope="col">Members</th>
+          <th scope="col">Owner</th>
           <th scope="col">Created At</th>
-          <th scope="col">Hacks Completed</th>
-          <th scope="col">Total Points</th>
+          <th scope="col">Updated At</th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
@@ -24,9 +24,7 @@
     </table>
   </div>
 
-  <% unless Current.user && Current.user.team %>
-    <%= link_to "New team", new_team_path %>
-  <% end %>
-  <br>
+  <%= link_to "New team", new_admin_team_path %><br>
+  
   <%== pagy_nav(@pagy) %>
 </div>

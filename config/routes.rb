@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :teams
     get 'login', to: 'sessions#new'
     post 'login', to: 'sessions#create'
     resources :dashboard

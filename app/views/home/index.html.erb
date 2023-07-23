@@ -6,10 +6,22 @@
         <article id="recent-events" class="home-content">
             <h2 class="home-headers">Upcoming events</h2>
             <div class="list-box comp-design">
-                <%# do we render things here? %>
-                <div class="revent-item list-item"></div>
-                <div class="revent-item list-item"></div>
-                <div class="revent-item list-item"></div>
+                <% @events.each do |event| %>
+                    <div class="revent-item list-item">
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="date"><%= event.date.strftime('%F') %></span>
+                                <br>
+                            </div>
+                            <div class="event-details">
+                                <h2><%= event.name %></h2>
+                                <p>
+                                    <%= event.description %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
             </div>
         </article>
         <article id="recent-blogs" class="home-content">
