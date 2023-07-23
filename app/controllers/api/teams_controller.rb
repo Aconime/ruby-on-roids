@@ -1,5 +1,5 @@
 class Api::TeamsController < ApplicationController
-  before_action :set_team, only: %i[ show edit update destroy ]
+  before_action :set_team, only: %i[show edit update destroy]
 
   # GET /api/teams or /api/teams.json
   def index
@@ -7,8 +7,7 @@ class Api::TeamsController < ApplicationController
   end
 
   # GET /api/teams/1 or /api/teams/1.json
-  def show
-  end
+  def show; end
 
   # GET /api/teams/new
   def new
@@ -16,8 +15,7 @@ class Api::TeamsController < ApplicationController
   end
 
   # GET /api/teams/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /api/teams or /api/teams.json
   def create
@@ -25,7 +23,9 @@ class Api::TeamsController < ApplicationController
 
     respond_to do |format|
       if @team.save
-        format.html { redirect_to api_team_url(@team), notice: "Team was successfully created." }
+        format.html do
+          redirect_to api_team_url(@team), notice: 'Team was successfully created.'
+        end
         format.json { render :show, status: :created, location: @team }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +38,9 @@ class Api::TeamsController < ApplicationController
   def update
     respond_to do |format|
       if @team.update(team_params)
-        format.html { redirect_to api_team_url(@team), notice: "Team was successfully updated." }
+        format.html do
+          redirect_to api_team_url(@team), notice: 'Team was successfully updated.'
+        end
         format.json { render :show, status: :ok, location: @team }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +54,22 @@ class Api::TeamsController < ApplicationController
     @team.destroy
 
     respond_to do |format|
-      format.html { redirect_to api_teams_url, notice: "Team was successfully destroyed." }
+      format.html do
+        redirect_to api_teams_url, notice: 'Team was successfully destroyed.'
+      end
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_team
-      @team = Team.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def team_params
-      params.fetch(:team, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_team
+    @team = Team.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def team_params
+    params.fetch(:team, {})
+  end
 end

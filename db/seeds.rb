@@ -2,7 +2,7 @@ require 'faker'
 
 unless User.find_by(email: 'admin@admin.com')
   User.create(email: 'admin@admin.com', first_name: 'admin', last_name: 'user',
-    role: 'admin', password: 'admin', password_confirmation: 'admin')
+              role: 'admin', password: 'admin', password_confirmation: 'admin')
 end
 
 def random_email_domain
@@ -10,19 +10,19 @@ def random_email_domain
 end
 
 SOFTWARE_TECHNOLOGIES = [
-  "Ruby", "Ruby on Rails", "Python", "Django", "JavaScript",
-  "React", "Vue.js", "Angular", "Node.js", "Express.js",
-  "Java", "Spring Boot", "C#", ".NET", "PHP", "Laravel",
-  "Swift", "Kotlin", "Flutter", "React Native", "SQL", "NoSQL"
-]
+  'Ruby', 'Ruby on Rails', 'Python', 'Django', 'JavaScript',
+  'React', 'Vue.js', 'Angular', 'Node.js', 'Express.js',
+  'Java', 'Spring Boot', 'C#', '.NET', 'PHP', 'Laravel',
+  'Swift', 'Kotlin', 'Flutter', 'React Native', 'SQL', 'NoSQL'
+].freeze
 
-while User.count < 150 do
-  first_name = Faker::Name.first_name
-  last_name = Faker::Name.last_name
+while User.count < 150
+  first_name = Faker::Name.first_name.downcase
+  last_name = Faker::Name.last_name.downcase
   email = "#{first_name}.#{last_name}@" + random_email_domain
   role = 'user'
   lorem = Faker::Lorem.paragraph(sentence_count: 2)
-  technologies = SOFTWARE_TECHNOLOGIES.sample(rand(1..4)).join(", ")
+  technologies = SOFTWARE_TECHNOLOGIES.sample(rand(1..4)).join(', ')
 
   User.create!(
     first_name: first_name,
@@ -46,9 +46,7 @@ def create_teams
       owner: user,
       points: points
     )
-    if team.save
-      user.update(team: team)
-    end
+    user.update(team: team) if team.save
   end
 end
 

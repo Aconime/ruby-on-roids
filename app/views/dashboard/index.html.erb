@@ -21,9 +21,9 @@
         </div>
       </article>
       <%= link_to 'Update my account', dashboard_edit_path, class: 'login-btn profile-edit' %>
+      <%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'logout-btn profile-edit' %>
     </div>
   </section>
   <div>
-    <%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'nav-items logout-btn' %>
   </div>
 </div>

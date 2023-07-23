@@ -1,23 +1,23 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy]
 
-  # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
+    @pagy, @blogs = pagy(@blogs)
   end
 
-  # GET /blogs/1 or /blogs/1.json
-  def show; end
+  def show
+    # empty
+  end
 
-  # GET /blogs/new
   def new
     @blog = Blog.new
   end
 
-  # GET /blogs/1/edit
-  def edit; end
+  def edit
+    # empty
+  end
 
-  # POST /blogs or /blogs.json
   def create
     @blog = Blog.new(blog_params)
 
@@ -26,47 +26,43 @@ class BlogsController < ApplicationController
         format.html do
           redirect_to _blog_url(@blog), notice: 'Blog was successfully created.'
         end
-        format.json { render :show, status: :created, location: @blog }
+        render :show, status: :created, location: @blog
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
+        render :new, status: :unprocessable_entity
+        render json: @blog.errors, status: :unprocessable_entity
       end
     end
   end
 
-  # PATCH/PUT /blogs/1 or /blogs/1.json
   def update
     respond_to do |format|
       if @blog.update(blog_params)
         format.html do
           redirect_to _blog_url(@blog), notice: 'Blog was successfully updated.'
         end
-        format.json { render :show, status: :ok, location: @blog }
+        render :show, status: :ok, location: @blog
       else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @blog.errors, status: :unprocessable_entity }
+        render :edit, status: :unprocessable_entity
+        render json: @blog.errors, status: :unprocessable_entity
       end
     end
   end
 
-  # DELETE /blogs/1 or /blogs/1.json
   def destroy
     @blog.destroy
 
-    respond_to do |format|
-      format.html { redirect_to _blogs_url, notice: 'Blog was successfully destroyed.' }
-      format.json { head :no_content }
+    respond_to do |_format|
+      redirect_to _blogs_url, notice: 'Blog was successfully destroyed.'
+      head :no_content
     end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_blog
     @blog = Blog.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def blog_params
     params.fetch(:blog, {})
   end
