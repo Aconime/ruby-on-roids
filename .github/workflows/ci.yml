@@ -1,0 +1,55 @@
+name: "Ruby on Rails CI"
+on:
+  push:
+    branches: [ 'main' ]
+  pull_request:
+    branches: [ 'main' ]
+
+jobs:
+  # test:
+  #   runs-on: ubuntu-latest
+  #   services:
+  #     postgres:
+  #       image: postgres:11-alpine
+  #       ports:
+  #         - "5432:5432"
+  #       env:
+  #         POSTGRES_DB: ruby_on_roids_test
+  #         POSTGRES_USER: github
+  #         POSTGRES_PASSWORD: password
+
+  #   env:
+  #     PGPORT: 5432
+  #     DATABASE_URL: "postgres://github:password@localhost:5432/ruby_on_roids_test"
+
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v3
+
+  #     - name: Install Ruby and gems
+  #       uses: ruby/setup-ruby@v1
+  #       with:
+  #         bundler-cache: true
+
+  #     - name: Set up database
+  #       run: bundle exec rails db:setup
+
+      # - name: Run RSpec Suite
+      #   run: bundle exec rspec spec
+
+      # - name: Run Minitest Suite
+      #   run: bundle exec rails test test
+  rubocop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run rubocop
+        run: bundle exec rubocop

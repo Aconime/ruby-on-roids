@@ -1,7 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-< Blog Details Here >
-
 <div>
+  <%= simple_format(@blog.body) %>
   <%= link_to "Back to blogs", blogs_path %>
 </div>

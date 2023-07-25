@@ -1,0 +1,24 @@
+<%= form_with model: support_ticket do |form| %>
+  <% if support_ticket.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(support_ticket.errors.count, "error") %> prohibited this support_ticket from being saved:</h2>
+
+      <ul>
+        <% support_ticket.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.hidden_field :user_id, class: 'form-control', value: Current.user.id %>
+  <div>
+    <%= form.text_field :title, placeholder: 'title' %>
+  </div>
+  <div><br>
+    <%= form.text_area :message, placeholder: 'message' %>
+  </div>
+  <div><br>
+    <%= form.submit 'Submit Ticket' %>
+  </div>
+<% end %>

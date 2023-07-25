@@ -1,0 +1,16 @@
+<div>
+  <p style="color: green"><%= notice %></p>
+
+  <div id="<%= dom_id @support_ticket %>">
+    <h2>Ticket</h2>
+    Title: <%= @support_ticket.message %><br>
+    Message: <%= @support_ticket.message %><br>
+    Replies: <br>
+    <h2>New Reply</h2>
+    <%= render partial: 'reply', locals: { support_ticket: @support_ticket } %>
+  </div>
+
+  <div>
+    <%= button_to "Destroy this support ticket", @support_ticket, method: :delete, class: 'logout-btn profile-edit' %>
+  </div>
+</div>

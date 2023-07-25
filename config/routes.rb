@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :support_tickets
   root 'home#index'
 
   get 'register', to: 'registrations#new'
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   put 'dashboard/edit', to: 'dashboard#update'
 
   resources :dashboard
+  resources :support_tickets, only: %i[show new]
   resources :events, only: %i[index show]
   resources :blogs, only: %i[index show]
   resources :leaderboard, only: :index
