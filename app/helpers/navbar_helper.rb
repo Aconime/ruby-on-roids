@@ -5,7 +5,7 @@ module NavbarHelper
       ['Teams', admin_teams_path],
       ['Events', admin_events_path],
       ['Blogs', admin_blogs_path],
-      ['Dashboard', admin_dashboard_index_path]
+      ['Dashboard', admin_root_path]
     ]
   end
 

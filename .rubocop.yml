@@ -278,3 +278,5 @@ Rails/InverseOf:
   Enabled: false
 Layout/ArgumentAlignment:
   Enabled: false
+Rails/ApplicationController:
+  Enabled: false
