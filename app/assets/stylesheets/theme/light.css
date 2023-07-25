@@ -1,12 +1,16 @@
 :root {
-  /* Default */
+  /* Main */
   --app-background-color: #ededed;
   --border-raduis: 4px;
 
-
+  /* so my eyes don't melt */
   --dev-txt-colour: #d0d0d5;
   --dev-colour: #3b3b4f;
-  /* so my eyes don't melt */
+
+  /* Generic */
+  --gen-panel-background-color: #fff;
+  --gen-panel-border-radius: 4px;
+  --gen-panel-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.15);
 
   /* Admin Dashboard - Basic*/
   --adm-dsh-background-color: #ededed;
@@ -43,6 +47,10 @@
   --adm-dsh-components-support-items-hover-border-color: #706fd3;
 
   /* Home components */
-
   --item-colour: #D9D9D9;
+
+  /* Misc */
+  --misc-padding: 15px;
+  --misc-shadow-color: rgba(0, 0, 0, 0.15);
+  --misc-border-color: rgba(0, 0, 0, 0.15);
 }

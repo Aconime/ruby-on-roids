@@ -1,0 +1,332 @@
+/* Margin & Padding */
+/* Remove Padding */
+.no-padding {
+  padding: 0 !important;
+}
+
+/* Padding All Sides */
+.pad-10 {
+  padding: 10px;
+}
+
+.pad-15 {
+  padding: 15px;
+}
+
+/* Padding Horizontal */
+.pad-h-10 {
+  padding: 0 10px;
+}
+
+.pad-h-15 {
+  padding: 0 15px;
+}
+
+/* Padding Vertical */
+.pad-v-10 {
+  padding: 10px 0px;
+}
+
+.pad-v-15 {
+  padding: 15px 0px;
+}
+
+/* Padding Left */
+.pad-left-4 {
+  padding-left: 4px;
+}
+
+.pad-left-5 {
+  padding-left: 5px;
+}
+
+.pad-left-6 {
+  padding-left: 6px;
+}
+
+.pad-left-10 {
+  padding-left: 10px;
+}
+
+.pad-left-15 {
+  padding-left: 15px;
+}
+
+/* Padding Right */
+.pad-right-4 {
+  padding-right: 4px;
+}
+
+.pad-right-5 {
+  padding-right: 5px;
+}
+
+.pad-right-6 {
+  padding-right: 6px;
+}
+
+.pad-right-10 {
+  padding-right: 10px;
+}
+
+.pad-right-15 {
+  padding-right: 15px;
+}
+
+/* Padding Top */
+.pad-top-5 {
+  padding-top: 10px;
+}
+
+.pad-top-10 {
+  padding-top: 10px;
+}
+
+.pad-top-15 {
+  padding-top: 15px;
+}
+
+/* Padding Bottom */
+.pad-top-5 {
+  padding-top: 10px;
+}
+
+.pad-bottom-10 {
+  padding-bottom: 10px;
+}
+
+.pad-bottom-15 {
+  padding-bottom: 15px;
+}
+
+/* Remove Margin */
+.no-margin {
+  margin: 0 !important;
+}
+
+/* Margin All Sides */
+.mrg-10 {
+  margin: 10px;
+}
+
+.mrg-15 {
+  margin: 15px;
+}
+
+/* Margin Horizontal */
+.mrg-h-10 {
+  margin: 0 10px;
+}
+
+.mrg-h-15 {
+  margin: 0 15px;
+}
+
+/* Margin Vertical */
+.mrg-v-10 {
+  margin: 10px 0px;
+}
+
+.mrg-v-15 {
+  margin: 15px 0px;
+}
+
+/* Margin Left */
+.mrg-left-4 {
+  margin-left: 4px;
+}
+
+.mrg-left-5 {
+  margin-left: 5px;
+}
+
+.mrg-left-6 {
+  margin-left: 6px;
+}
+
+.mrg-left-10 {
+  margin-left: 10px;
+}
+
+.mrg-left-15 {
+  margin-left: 15px;
+}
+
+/* Margin Right */
+.mrg-right-4 {
+  margin-right: 4px;
+}
+
+.mrg-right-5 {
+  margin-right: 5px;
+}
+
+.mrg-right-6 {
+  margin-right: 6px;
+}
+
+.mrg-right-10 {
+  margin-right: 10px;
+}
+
+.mrg-right-15 {
+  margin-right: 15px;
+}
+
+/* Margin Top */
+.mrg-top-5 {
+  margin-top: 10px;
+}
+
+.mrg-top-10 {
+  margin-top: 10px;
+}
+
+.mrg-top-15 {
+  margin-top: 15px;
+}
+
+/* Margin Bottom */
+.mrg-top-5 {
+  margin-top: 10px;
+}
+
+.mrg-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.mrg-bottom-15 {
+  margin-bottom: 15px;
+}
+
+/* Flexbox */
+/* Make Flex */
+.is-flex {
+  display: flex;
+}
+
+/* Flex Items Row */
+.flex-row {
+  flex-direction: row;
+}
+
+/* Flex Items Column */
+.flex-col {
+  flex-direction: column;
+}
+
+/* Flex Gaps */
+.flex-gap-4 {
+  gap: 4px;
+}
+
+.flex-gap-5 {
+  gap: 5px;
+}
+
+.flex-gap-6 {
+  gap: 6px;
+}
+
+.flex-gap-8 {
+  gap: 8px;
+}
+
+.flex-gap-10 {
+  gap: 10px;
+}
+
+.flex-gap-12 {
+  gap: 12px;
+}
+
+.flex-gap-15 {
+  gap: 15px;
+}
+
+.flex-gap-20 {
+  gap: 20px;
+}
+
+/* Flex Justify Content */
+.flex-just-center {
+  justify-content: center;
+}
+
+.flex-just-inner {
+  justify-content: space-between;
+}
+
+.flex-just-outer {
+  justify-content: space-around;
+}
+
+.flex-just-even {
+  justify-content: space-evenly;
+}
+
+.flex-just-left {
+  justify-content: left;
+}
+
+.flex-just-right {
+  justify-content: right;
+}
+
+.flex-just-start {
+  justify-content: flex-start;
+}
+
+.flex-just-end {
+  justify-content: flex-end;
+}
+
+/* Flexbox Align Items */
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.flex-align-end {
+  align-items: flex-end;
+}
+
+/* Other */
+.is-block {
+  display: block;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-1 {
+  width: 1fr;
+}
+
+.w-2 {
+  width: 2fr;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.h-50vh {
+  height: 50vh;
+}
