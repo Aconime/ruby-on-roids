@@ -20,4 +20,8 @@ class User < ApplicationRecord
 
     image_url
   end
+
+  def team_requests
+    TeamRequest.where(user_id: id)
+  end
 end

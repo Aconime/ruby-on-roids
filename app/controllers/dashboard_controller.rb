@@ -2,7 +2,7 @@ class DashboardController < ApplicationController
   before_action :validate_user
 
   def index
-    # empty
+    @team_requests = Current.user.team_requests
   end
 
   def edit
