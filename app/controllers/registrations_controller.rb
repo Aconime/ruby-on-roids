@@ -1,4 +1,6 @@
 class RegistrationsController < ApplicationController
+  before_action :check_not_logged_in, only: %i(new create)
+
   def index; end
 
   def new
@@ -21,6 +23,10 @@ class RegistrationsController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name,
-                                 :password, :password_confirmation)
+      :password, :password_confirmation)
+  end
+
+  def check_not_logged_in
+    redirect_to root_path, notice: 'You are already logged in' if session[:user_id]
   end
 end
