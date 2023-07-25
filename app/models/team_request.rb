@@ -2,7 +2,5 @@ class TeamRequest < ApplicationRecord
   belongs_to :team
   belongs_to :user
 
-  def team_name
-    team.name
-  end
+  delegate :name, to: :team, prefix: true
 end

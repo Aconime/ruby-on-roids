@@ -1,5 +1,5 @@
 class RegistrationsController < ApplicationController
-  before_action :check_not_logged_in, only: %i(new create)
+  before_action :check_not_logged_in, only: %i[new create]
 
   def index; end
 

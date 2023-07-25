@@ -23,10 +23,18 @@
   <body>
     <div class='main'>
       <%= render partial: 'layouts/navbar' %>
-      <div class='container'>
+      <% if controller_path.starts_with?('admin/dashboard') %>
+          <%= render partial: 'layouts/flash' %>
+          <%= yield %>
+      <% elsif controller_path.starts_with?('admin/') %>
+        <div class='container'>
+          <%= render partial: 'layouts/flash' %>
+          <%= yield %>
+        </div>
+      <% else %>
         <%= render partial: 'layouts/flash' %>
         <%= yield %>
-      </div>
+      <% end %>
     </div>
   </body>
 </html>
