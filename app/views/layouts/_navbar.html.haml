@@ -1,0 +1,18 @@
+.homepage
+  %ul
+    - if Current.user && Current.user.role == 'admin'
+      = link_to 'Admin Dashboard', admin_dashboard_index_path, class: 'left-nav-items nav-items'
+      = link_to 'Create Ticket', new_support_ticket_path, class: 'left-nav-items nav-items'
+      = button_to 'Logout', logout_path, method: :delete, class: 'right-nav-items nav-items logout-btn'
+      - admin_nav_items.each do |text, path|
+        = link_to text, path, class: 'right-nav-items nav-items'
+    - else
+      = link_to 'Ruby on Roids', root_path, class: 'left-nav-items nav-items'
+      = link_to 'Create Ticket', new_support_ticket_path, class: 'left-nav-items nav-items'
+      - if Current.user && Current.user.role == 'user'
+        = button_to 'Logout', logout_path, method: :delete, class: 'right-nav-items nav-items logout-btn'
+        = link_to Current.user.name, dashboard_index_path, class: 'right-nav-items nav-items'
+      - else
+        = link_to 'Login', login_path, class: 'right-nav-items nav-items login-btn'
+      - user_nav_items.each do |text, path|
+        = link_to text, path, class: 'right-nav-items nav-items'

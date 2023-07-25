@@ -5,6 +5,7 @@ ruby '3.0.0'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', require: false
+gem 'haml-rails'
 gem 'importmap-rails'
 gem 'jbuilder'
 gem 'pagy'
