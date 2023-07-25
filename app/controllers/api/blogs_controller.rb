@@ -1,4 +1,4 @@
-class Api::BlogsController < ApplicationController
+class Api::BlogsController < Api::BaseController
   before_action :set_blog, only: %i[show edit update destroy]
 
   # GET /api/blogs or /api/blogs.json

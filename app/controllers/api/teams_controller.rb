@@ -1,4 +1,4 @@
-class Api::TeamsController < ApplicationController
+class Api::TeamsController < Api::BaseController
   before_action :set_team, only: %i[show edit update destroy]
 
   # GET /api/teams or /api/teams.json

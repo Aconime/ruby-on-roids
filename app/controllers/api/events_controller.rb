@@ -1,4 +1,4 @@
-class Api::EventsController < ApplicationController
+class Api::EventsController < Api::BaseController
   before_action :set_event, only: %i[show edit update destroy]
 
   # GET /api/events or /api/events.json
