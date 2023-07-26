@@ -1,4 +1,4 @@
-<div class='custom-container'>
+<div>
   <p style="color: green"><%= notice %></p>
 
   <%= render @team %>
@@ -11,6 +11,7 @@
     <%= render partial: 'request', locals: { team_request: @team_request } %>
   <% end %>
 
+  <br>
   <div>
     <%= link_to "Back to teams", teams_path, class: 'back-btn' %>
   </div>

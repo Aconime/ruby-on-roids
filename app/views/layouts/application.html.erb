@@ -22,11 +22,9 @@
 
   <body>
     <div class='main'>
-      <%= render partial: 'layouts/navbar' %>
-      <div class='container'>
-        <%= render partial: 'layouts/flash' %>
-        <%= yield %>
-      </div>
+      <%= render partial: 'navigation/navbar' %>
+      <%= render partial: 'layouts/flash' %>
+      <%= yield %>
     </div>
   </body>
 </html>

@@ -1,0 +1,10 @@
+/*
+ *= require_self
+ *
+ * should change this with admin/navbar.css
+ *= require navbar.css
+ *= require admin/navbar.css
+ *= require theme/light.css
+ *
+ *= require admin/dashboard.css
+*/

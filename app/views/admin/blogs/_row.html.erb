@@ -1,7 +1,7 @@
 <tr>
   <th scope="row"><%= blog.id %></th>
   <td><%= blog.title %></td>
-  <td><%= blog.body %></td>
+  <td><%= blog.body.last(75) %></td>
   <td><%= blog.published %></td>
   <td><%= blog.created_at %></td>
     <td>

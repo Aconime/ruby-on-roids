@@ -21,9 +21,38 @@
         </div>
       </article>
       <%= link_to 'Update my account', dashboard_edit_path, class: 'login-btn profile-edit' %>
+      <%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'logout-btn profile-edit' %>
     </div>
   </section>
+  <section class='my-team-requests'>
+    <h2> My Requests </h2>
+    <% if @team_requests %>
+      <% @team_requests.each do |request| %>
+        <article class='request-object'>
+          Team: <%= request.team_name%><br>
+          Message: <%= request.message%><br>
+          Date Created: <%= request.created_at%><br>
+        </article>
+      <% end %>
+    <% else %>
+      You have no team requests, make some <a>here</a>
+    <% end %>
+  </section>
+  <br>
+  <section class='my-support-tickets'>
+    <h2> My Support Tickets </h2>
+    <% if @support_tickets %>
+      <% @support_tickets.each do |ticket| %>
+        <article class='support-ticket'>
+          Title: <%= ticket.title%><br>
+          Message: <%= ticket.message%><br>
+        <%= link_to "View", support_ticket_path(ticket), class: 'login-btn profile-edit' %>
+        </article>
+      <% end %>
+    <% else %>
+      You have no support tickets, make some <a>here</a>
+    <% end %>
+  </section>
   <div>
-    <%= button_to 'Delete my account', delete_account_path, method: :delete, class: 'nav-items logout-btn' %>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <tr>
   <th scope="row"><%= event.id %></th>
   <td><%= event.name %></td>
-  <td><%= event.description %></td>
+  <td><%= event.description.last(75) %></td>
   <td><%= event.date %></td>
   <td>
     <%= link_to [:admin, event] do %>

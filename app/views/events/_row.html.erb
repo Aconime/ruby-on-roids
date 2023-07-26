@@ -1,7 +1,7 @@
 <tr>
   <th scope="row"><%= event.id %></th>
   <td><%= event.name %></td>
-  <td><%= event.description %></td>
-  <td><%= event.date %></td>
+  <td><%= event.description.last(75) %></td>
+  <td><%= event.date.strftime('%FT%R') %></td>
   <td><%= link_to "Show", event_path(event) %></td>
 </tr>
