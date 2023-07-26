@@ -37,6 +37,8 @@ Rails.application.routes.draw do
     resources :users
     resources :events
     resources :blogs
+
+    root to: 'dashboard#index'
   end
 
   namespace :api do

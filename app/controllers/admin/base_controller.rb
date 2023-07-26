@@ -1,7 +1,13 @@
-class Admin::BaseController < ApplicationController
-  before_action :verify_admin
+class Admin::BaseController < ActionController::Base
+  include Pagy::Backend
 
-  def verify_admin
-    redirect_to root_path unless Current.user && Current.user.role == 'admin'
-  end
+  # admin helpers
+  include Admin::PaginationHelper
+  include Admin::CurrentDetailsHelper
+  include Admin::AuthenticationHelper
+
+  # global helpers
+  include NavbarHelper
+
+  layout 'admin'
 end

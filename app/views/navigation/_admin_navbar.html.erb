@@ -1,0 +1,10 @@
+<div class="homepage">
+  <ul>
+    <%= link_to 'Admin Dashboard', admin_root_path, class: 'left-nav-items nav-items' %>
+    <%= link_to 'Create Ticket', new_support_ticket_path, class: 'left-nav-items nav-items' %>
+    <%= button_to 'Logout', logout_path, method: :delete, class: 'right-nav-items nav-items logout-btn' %>
+    <% admin_nav_items.each do |text, path| %>
+      <%= link_to text, path, class: 'right-nav-items nav-items' %>
+    <% end %>
+  </ul>
+</div>
