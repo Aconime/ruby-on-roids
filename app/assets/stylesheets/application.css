@@ -24,9 +24,16 @@
   box-sizing: border-box;
   list-style: none;
   font-family: "Roboto", sans-serif;
-  /* color: var(--dev-txt-colour); */
 }
 
+/* Element Options */
+input,
+button {
+  outline: none;
+  border: none;
+}
+
+/* Containers */
 .container {
   width: 100% !important;
   padding: 0 !important;
@@ -43,10 +50,10 @@
   min-height: 100dvh;
 }
 
-.custom-container{
+.custom-container {
   /* outline: 1px dashed red; */
-  padding-right:20%;
-  padding-left:20%;
-  margin-right:auto;
-  margin-left:auto;
+  padding-right: 20%;
+  padding-left: 20%;
+  margin-right: auto;
+  margin-left: auto;
 }

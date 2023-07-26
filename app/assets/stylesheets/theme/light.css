@@ -1,7 +1,26 @@
 :root {
+  /* Theme Colors */
+  --app-primary: #706fd3;
+  --app-primary-dark: #474787;
+  --app-primary-darkest: #40407a;
+  --app-secondary: #dfdfdf;
+  --app-secondary-dark: #e8e8e8;
+  --app-secondary-darkest: #d6d6d6;
+
+  /* Scheme Colors */
+  --app-scheme-1: #ffffff;
+  --app-scheme-2: #ededed;
+  --app-scheme-3: #555555;
+  --app-scheme-4: #333333;
+  --app-scheme-5: #1d1d1d;
+
   /* Main */
   --app-background-color: #ededed;
-  --border-raduis: 4px;
+  --app-text-color: #333;
+  --app-text-contrast-color: #d0d0d5;
+  --app-border-color: rgba(0, 0, 0, 0.15);
+  --app-border-radius: 4px;
+  --app-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.15);
 
   /* so my eyes don't melt */
   --dev-txt-colour: #d0d0d5;
@@ -10,12 +29,12 @@
   /* Generic */
   --gen-panel-background-color: #fff;
   --gen-panel-border-radius: 4px;
-  --gen-panel-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.15);
+  --gen-panel-shadow: var(--app-shadow);
 
   /* Admin Dashboard - Basic*/
   --adm-dsh-background-color: #ededed;
   --adm-dsh-components-background-color: #fff;
-  --adm-dsh-components-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.15);
+  --adm-dsh-components-shadow: var(--app-shadow);
   --adm-dsh-components-border-color: rgba(0, 0, 0, 0.15);
   --adm-dsh-components-radius: 4px;
   --adm-dsh-text-color: #333;
@@ -52,5 +71,4 @@
   /* Misc */
   --misc-padding: 15px;
   --misc-shadow-color: rgba(0, 0, 0, 0.15);
-  --misc-border-color: rgba(0, 0, 0, 0.15);
 }
