@@ -1,5 +1,7 @@
 #home {
     --banner-txt-colour: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 .comp-design * {

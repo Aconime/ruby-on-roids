@@ -41,6 +41,13 @@ button {
   margin-left:auto;
 }
 
+.test {
+  outline: 2px dashed green;
+  color: #d0d0d5;
+  background-color: #3b3b4f;
+  width: 50%;
+}
+
 .main {
   /* color: var(--dev-text-colour); */
   /* background-color: var(--dev-colour); */
@@ -50,10 +57,18 @@ button {
   min-height: 100dvh;
 }
 
-.custom-container {
+.main > div:nth-of-type(2) {
   /* outline: 1px dashed red; */
   padding-right: 20%;
   padding-left: 20%;
   margin-right: auto;
   margin-left: auto;
+}
+
+.custom-container {
+  /* outline: 1px dashed red; */
+  /* padding-right: 20%; */
+  /* padding-left: 20%; */
+  /* margin-right: auto; */
+  /* margin-left: auto; */
 }
