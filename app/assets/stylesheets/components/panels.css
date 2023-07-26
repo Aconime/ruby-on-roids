@@ -1,5 +1,5 @@
 /* Panels UI */
-.panel {
+.app-panel {
   background-color: var(--gen-panel-background-color);
   padding: var(--misc-padding);
   border-radius: var(--gen-panel-border-radius);

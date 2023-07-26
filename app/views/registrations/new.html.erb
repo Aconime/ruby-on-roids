@@ -1,7 +1,9 @@
-<div class="login-page">
-  <div class="form">
+<div class="form-page w-100 h-100 is-flex flex-just-center flex-align-center">
+  <div class="form-wrapper app-panel pad-v-20">
     <h1>Register</h1>
-    <%= form_with model: @user, url: register_path, html: { class: 'login-form' } do |form| %>
+    <%= form_with model: @user, url: register_path, html: {
+        class: 'form pad-15 is-flex flex-col flex-gap-15 flex-align-center'
+      } do |form| %>
       <% if @user.errors.any? %>
         <div class='alert alert-danger'>
           <% @user.errors.full_messages.each do |message| %>
@@ -9,13 +11,52 @@
           <% end %>
         </div>
       <% end %>
-      <%= form.text_field :email, placeholder: 'email' %>
-      <%= form.text_field :first_name, placeholder: 'first name' %>
-      <%= form.text_field :last_name, placeholder: 'last name' %>
-      <%= form.password_field :password, placeholder: 'password' %>
-      <%= form.password_field :password_confirmation, placeholder: 'confirm password' %>
-      <%= form.submit 'Register', class: 'button' %>
+      <div class="form-field">
+        <label for="email-input" id="email-label" class="form-label">Email Address</label>
+        <%= form.text_field :email, id: 'email-input',
+          onfocus: 'handleFieldFocus("email-label")', onfocusout: 'handleFieldUnfocus(this, "email-label")' %>
+      </div>
+
+      <div class="form-field">
+        <label for="fname-input" id="fname-label" class="form-label">First Name</label>
+        <%= form.text_field :first_name, id: 'fname-input',
+          onfocus: 'handleFieldFocus("fname-label")', onfocusout: 'handleFieldUnfocus(this, "fname-label")' %>
+      </div>
+
+      <div class="form-field">
+        <label for="lname-input" id="lname-label" class="form-label">Last Name</label>
+        <%= form.text_field :last_name, id: 'lname-input',
+          onfocus: 'handleFieldFocus("lname-label")', onfocusout: 'handleFieldUnfocus(this, "lname-label")' %>
+      </div>
+
+      <div class="form-field">
+        <label for="password-input" id="password-label" class="form-label">Password</label>
+        <%= form.password_field :password, id: 'password-input',
+          onfocus: 'handleFieldFocus("password-label")', onfocusout: 'handleFieldUnfocus(this, "password-label")' %>
+      </div>
+
+      <div class="form-field">
+        <label for="cpassword-input" id="cpassword-label" class="form-label">Confirm Password</label>
+        <%= form.password_field :password_confirmation, id: 'cpassword-input',
+          onfocus: 'handleFieldFocus("cpassword-label")', onfocusout: 'handleFieldUnfocus(this, "cpassword-label")' %>
+      </div>
+
+      <%= form.submit 'Register', class: 'button pad-v-10' %>
       <p class="message">Already registered? <%= link_to 'Sign In', login_path %></p>
     <% end %>
   </div>
 </div>
+
+<script>
+  function handleFieldFocus(label) {
+    const currentLabel = document.getElementById(label);
+    currentLabel.classList.add('focus');
+  }
+
+  function handleFieldUnfocus(input, label) {
+    const currentlabel = document.getElementById(label);
+    if (input.value === "" || input.value === null) {
+      currentlabel.classList.remove('focus');
+    }
+  }
+</script>
