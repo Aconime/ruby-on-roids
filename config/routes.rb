@@ -48,4 +48,5 @@ Rails.application.routes.draw do
     resources :blogs
     resources :teams
   end
+  get 'test', to: 'test#test'
 end
