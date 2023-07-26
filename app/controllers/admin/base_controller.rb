@@ -1,13 +1,11 @@
 class Admin::BaseController < ActionController::Base
   include Pagy::Backend
 
-  # admin helpers
-  include Admin::PaginationHelper
-  include Admin::CurrentDetailsHelper
-  include Admin::AuthenticationHelper
+  include Shared::CurrentDetailsHelper
+  include Shared::NavbarHelper
 
-  # global helpers
-  include NavbarHelper
+  include Admin::PaginationHelper
+  include Admin::AuthenticationHelper
 
   layout 'admin'
 end
