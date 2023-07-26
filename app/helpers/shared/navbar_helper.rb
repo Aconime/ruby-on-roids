@@ -1,4 +1,4 @@
-module NavbarHelper
+module Shared::NavbarHelper
   def admin_nav_items
     [
       ['Users', admin_users_path],

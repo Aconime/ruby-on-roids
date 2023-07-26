@@ -1,4 +1,4 @@
-module Admin::CurrentDetailsHelper
+module Shared::CurrentDetailsHelper
   extend ActiveSupport::Concern
 
   included do
