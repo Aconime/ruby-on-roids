@@ -4,11 +4,6 @@
     padding: 0;
 }
 
-.comp-design * {
-    border-radius: var(--app-border-radius);
-    color: black;
-}
-
 #home * {
     /* margin: 0; */
     /* padding: 0; */
