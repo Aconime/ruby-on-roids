@@ -86,11 +86,17 @@
 }
 
 .admin-dashboard-stats-panel-action {
+  text-decoration: none;
   width: 100%;
   height: 35px;
   text-align: center;
   border-bottom-right-radius: var(--adm-dsh-components-radius);
   border-bottom-left-radius: var(--adm-dsh-components-radius);
+  line-height: 35px;
+  font-size: 10.25pt;
+  font-weight: 600;
+  letter-spacing: var(--adm-dsh-text-letter-spacing);
+  color: var(--adm-dsh-components-stats-darker-text-color);
   cursor: pointer !important;
 }
 
@@ -105,6 +111,13 @@
   font-weight: 600;
   letter-spacing: var(--adm-dsh-text-letter-spacing);
   color: var(--adm-dsh-components-stats-darker-text-color);
+  text-decoration: none;
+}
+
+.admin-dashboard-stats-panel-action:hover,
+.admin-dashboard-stats-panel-action:active {
+  color: var(--adm-dsh-components-stats-darker-text-color);
+  text-decoration: none;
 }
 
 .admin-dashboard-stats-action-icon {
@@ -192,6 +205,7 @@
   padding: 0;
   font-size: 14pt;
   font-weight: 500;
+  color: var(--adm-dsh-text-color);
   letter-spacing: var(--adm-dsh-text-letter-spacing);
 }
 
@@ -209,14 +223,6 @@
 
 .admin-dashboard-widget-content.nopadding {
   padding: 0;
-}
-
-/* Charts */
-.admin-dashboard-widget-chart {
-  margin: 0 !important;
-  width: 100%;
-  box-sizing: border-box;
-  user-select: none !important;
 }
 
 /* Support Items */

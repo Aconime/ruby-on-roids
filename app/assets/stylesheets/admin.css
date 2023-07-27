@@ -4,7 +4,21 @@
  * should change this with admin/navbar.css
  *= require navbar.css
  *= require admin/navbar.css
+ *= require admin/chart.css
  *= require theme/light.css
  *
  *= require admin/dashboard.css
 */
+
+.admin {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+.admin-content {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+}

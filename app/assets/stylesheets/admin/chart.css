@@ -1,0 +1,25 @@
+/* Charts */
+.admin-dashboard-widget-chart {
+  margin: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
+  user-select: none !important;
+}
+
+.admin-dashboard-widget-chart>div>div:nth-child(1)>div>svg>g:nth-child(3)>g:nth-child(2)>g:nth-child(1) rect {
+  fill: var(--app-accent-5);
+}
+
+.admin-dashboard-widget-chart>div>div:nth-child(1)>div>svg>g:nth-child(3)>g:nth-child(4) text,
+.admin-dashboard-widget-chart>div>div:nth-child(1)>div>svg>g:nth-child(3)>g:nth-child(5) text {
+  fill: var(--app-accent-2);
+}
+
+.admin-dashboard-widget-chart>div>div:nth-child(1)>div>svg>g:nth-child(3)>g:nth-child(5)>g:nth-child(8) text {
+  stroke: none;
+}
+
+.admin-dashboard-widget-chart>div>div:nth-child(1)>div>svg>g>rect,
+.admin-dashboard-widget-chart>div>div:nth-child(1)>div>svg>rect {
+  fill: transparent;
+}

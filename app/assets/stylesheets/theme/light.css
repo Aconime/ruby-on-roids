@@ -1,43 +1,42 @@
 :root {
   /* Theme Colors */
-  --app-primary: #706fd3;
-  --app-primary-dark: #474787;
-  --app-primary-darkest: #40407a;
-  --app-secondary: #dfdfdf;
-  --app-secondary-dark: #e8e8e8;
-  --app-secondary-darkest: #d6d6d6;
+  --app-primary: #2B5DFF;
+  --app-primary-dark: #2247BF;
+  --app-secondary: #FF4871;
+  --app-secondary-dark: #D33B5D;
 
   /* Scheme Colors */
-  --app-scheme-1: #ffffff;
-  --app-scheme-2: #ededed;
-  --app-scheme-3: #555555;
-  --app-scheme-4: #333333;
-  --app-scheme-5: #1d1d1d;
+  --app-accent-1: #ffffff;
+  --app-accent-2: #ededed;
+  --app-accent-3: #15192A;
+  --app-accent-4: #1F263C;
+  --app-accent-5: #232A46;
+  --app-accent-6: #394466;
 
   /* Main */
-  --app-background-color: #ededed;
-  --app-text-color: #333;
-  --app-text-contrast-color: #d0d0d5;
-  --app-border-color: rgba(0, 0, 0, 0.15);
+  --app-background-color: var(--app-accent-3);
+  --app-text-color: var(--app-accent-2);
+  --app-text-contrast-color: var(--app-accent-6);
+  --app-border-color: rgba(0, 0, 0, 0.2);
   --app-border-radius: 4px;
-  --app-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.15);
+  --app-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.2);
 
   /* so my eyes don't melt */
   --dev-txt-colour: #d0d0d5;
   --dev-colour: #3b3b4f;
 
   /* Generic */
-  --gen-panel-background-color: #fff;
+  --gen-panel-background-color: var(--app-accent-5);
   --gen-panel-border-radius: 4px;
   --gen-panel-shadow: var(--app-shadow);
 
   /* Admin Dashboard - Basic*/
-  --adm-dsh-background-color: #ededed;
-  --adm-dsh-components-background-color: #fff;
+  --adm-dsh-background-color: var(--app-accent-3);
+  --adm-dsh-components-background-color: var(--app-accent-5);
   --adm-dsh-components-shadow: var(--app-shadow);
-  --adm-dsh-components-border-color: rgba(0, 0, 0, 0.15);
+  --adm-dsh-components-border-color: rgba(0, 0, 0, 0.2);
   --adm-dsh-components-radius: 4px;
-  --adm-dsh-text-color: #333;
+  --adm-dsh-text-color: var(--app-accent-2);
   --adm-dsh-text-letter-spacing: 0.2px;
 
   /* Admin Dashboard - Stats Panel */
@@ -70,5 +69,5 @@
 
   /* Misc */
   --misc-padding: 15px;
-  --misc-shadow-color: rgba(0, 0, 0, 0.15);
+  --misc-shadow-color: rgba(0, 0, 0, 0.2);
 }
