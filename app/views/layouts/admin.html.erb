@@ -21,10 +21,12 @@
   </head>
 
   <body>
-    <%= render partial: 'navigation/admin_navbar' %>
-    <div>
-      <%= render partial: 'layouts/flash' %>
-      <%= yield %>
+    <div class="admin">
+      <%= render partial: 'navigation/admin_navbar' %>
+      <div class="admin-content">
+        <%= render partial: 'layouts/flash' %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

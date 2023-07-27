@@ -1,0 +1,57 @@
+.admin-nav-sidebar {
+  padding: 15px;
+  box-sizing: border-box;
+  width: 350px;
+  height: 100vh;
+  background-color: var(--app-accent-5);
+}
+
+.admin-nav-sidebar>ul {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  background-color: transparent;
+}
+
+.admin-nav-sidebar>ul>a {
+  padding: 10px 12px;
+  text-align: left;
+  border-radius: var(--app-border-radius);
+  color: var(--app-accent-2);
+  cursor: pointer;
+}
+
+.admin-nav-sidebar>ul>a.selected {
+  padding: 10px 12px;
+  text-align: left;
+  background-color: var(--app-primary);
+  color: var(--app-accent-2);
+}
+
+.admin-nav-sidebar>ul>a:hover {
+  padding: 10px 12px;
+  text-align: left;
+  background-color: var(--app-accent-6);
+  color: var(--app-accent-2);
+}
+
+.admin-nav-sidebar>ul>a:active {
+  padding: 10px 12px;
+  text-align: left;
+  background-color: var(--app-primary);
+  color: var(--app-accent-2);
+}
+
+.admin-nav-sidebar>ul>a:nth-child(1),
+.admin-nav-sidebar>ul>a:nth-child(2) {
+  display: none;
+}
+
+.admin-nav-sidebar>ul>form {
+  position: fixed;
+  bottom: 15px;
+}
+
+.admin-nav-sidebar>ul>form>button {
+  width: calc(350px - 80px);
+}
