@@ -55,6 +55,10 @@
     background-color: var(--item-colour);
 }
 
+.mini-box * {
+    margin: 0;
+}
+
 .profile-username {
     font-size: 4rem;
 }
