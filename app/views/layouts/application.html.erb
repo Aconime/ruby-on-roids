@@ -21,9 +21,9 @@
   </head>
 
   <body>
+    <%= render partial: 'navigation/navbar' %>
+    <%= render partial: 'layouts/flash' %>
     <div class='main'>
-      <%= render partial: 'navigation/navbar' %>
-      <%= render partial: 'layouts/flash' %>
       <%= yield %>
     </div>
   </body>

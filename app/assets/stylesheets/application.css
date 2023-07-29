@@ -48,16 +48,25 @@ button {
   width: 50%;
 }
 
+body {
+  background-color: var(--app-background-color);
+}
+
 .main {
   /* color: var(--dev-text-colour); */
   /* background-color: var(--dev-colour); */
-  background-color: var(--app-background-color);
   height: 100%;
+  margin-top: 2rem;
   min-height: 100vh;
   min-height: 100dvh;
 }
 
-.main > div:nth-of-type(2) {
+.main * {
+  margin: 0;
+  /* padding: 0; */
+}
+
+.main > div:first-of-type {
   /* outline: 1px dashed red; */
   padding-right: 20%;
   padding-left: 20%;
