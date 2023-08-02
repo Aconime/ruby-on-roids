@@ -31,9 +31,9 @@
     color: var(--banner-txt-colour);
 }
 
-.home-banner h1 {
+/* .home-banner h1 {
     font-size: 7rem;
-}
+} */
 
 #home-content-box {
     /* outline: 1px red dashed; */
